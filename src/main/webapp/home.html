@@ -1,0 +1,24 @@
+<html>
+ 
+<title>Java Home</title>
+
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/index.css" rel="stylesheet">
+<script type="text/javascript" src="js/angular.min.js" ></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/student-app-router.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/constant.js"></script>
+<script type="text/javascript" src="js/student.js"></script>
+</head>
+
+<!-- Body tag augmented with ngController directive  -->
+ <body ng-controller="MyController">
+   <input ng-model="foo" value="bar">
+   <!-- Button tag with ng-click directive, and
+          string expression 'buttonText'
+          wrapped in "{{ }}" markup -->
+   <button ng-click="changeFoo()">{{buttonText}}</button>
+ </body>
+</html>

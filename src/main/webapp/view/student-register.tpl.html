@@ -1,0 +1,70 @@
+<div class="container">
+	<h1 class="well">Registration Form</h1>
+	<div class="col-lg-12 well">
+		<div class="row">
+			<form>
+				<div class="col-sm-12">
+					<div class="row">
+						<div class="col-sm-9 form-group"></div>
+						<div class="col-sm-3 form-group"></div>
+
+
+
+
+						<div class="col-sm-4 form-group">
+							<label>First Name</label> <input type="text" class="form-control"
+								placeholder="First Name" ng-model="saveStudents.firstName">
+						</div>
+
+						<div class="col-sm-4 form-group">
+							<label>Last Name</label> <input type="text" class="form-control"
+								placeholder="Last Name" ng-model="saveStudents.lastName">
+						</div>
+
+						<div class="col-sm-4 form-group">
+							<label>Email Address</label> <input for="email" type="text" class="form-control" placeholder="E-Mail" ng-model="saveStudents.email">
+						</div>
+					</div>
+					<div class="form-group">
+						<label>Select Course</label> <select
+							ng-model="saveStudents.courses" class="form-control"
+							multiple="multiple">
+							<option ng:repeat="course in courses" value="{{course.id}}">{{course.name}}</option>
+						</select>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 form-group">
+							<label>Year of passing</label> <select class="form-control"
+								placeholder="Year of passing"
+								ng-init="years=['2010','2011','2012','2013','2014','2015','2016']"
+								ng-model="saveStudents.yesrOfPass">
+								<option ng:repeat="year in years" value="{{year}}">{{year}}</option>
+							</select>
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>Password</label> <input type="password"
+								class="form-control" placeholder="Password"
+								ng-model="saveStudents.password">
+
+						</div>
+						<div class="col-sm-4 form-group">
+							<label>Confirm Password</label> <input type="password"
+								class="form-control" placeholder="Confirm Password">
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 form-group">
+						<label>Phone Number</label> <input type="text" ng-model="saveStudents.mobile"	placeholder="Enter Phone Number Here.." class="form-control">
+							
+						</div>
+						<div class="col-sm-6 form-group">
+							<input type="button" class="btn btn-info"
+								value="Register" ng-click="saveStudents();" />
+						</div>
+					</div>
+
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
